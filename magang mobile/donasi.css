@@ -1,0 +1,127 @@
+/* ---------- DETAIL DONASI (frame 1440 x 1015) ---------- */
+.detail{position:relative;height:1015px;background:#fff}
+.detail>*{position:absolute}
+.d-photo{left:60px;top:77px;width:579px;height:354px;border-radius:24px;object-fit:cover;background:#7a2a1a}
+.d-info{left:720px;top:128px;width:580px}
+.d-info.dua{top:78px}
+.d-title{font:600 48px/58px 'Inter',sans-serif;color:#3E4B8E}
+.d-desc{margin-top:17px;width:var(--dw,466px);font:500 24px/29px 'Inter',sans-serif;color:#6b6b6b}
+.d-divider{left:694px;top:450px;height:490px;border-left:1px solid #3E4B8E}
+.d-h2{font:600 32px/39px 'Inter',sans-serif;color:#3E4B8E;white-space:nowrap}
+
+/* kiri: progress & grafik */
+.d-prog-h{left:60px;top:462px}
+.d-prog-txt{left:60px;top:512px;font:300 16px/20px 'Inter',sans-serif;color:#6b6b6b}
+.d-bar{left:60px;top:544px;width:553px;height:26px;border-radius:13px;background:#D9D9D9;overflow:hidden}
+.d-bar i{display:block;width:var(--pct);height:100%;border-radius:13px;background:#378ADD}
+.d-donatur{left:60px;top:581px;font:700 16px/20px 'Inter',sans-serif;color:#3E4B8E}
+.d-pie{left:60px;top:660px;width:227px;height:227px;border-radius:50%;background:conic-gradient(#4287F5 0 40%,#D8E6FC 0 75%,#8DB4F8 0)}
+.d-legend{left:327px;top:716px}
+.d-legend li{display:flex;align-items:center;gap:8px;height:22px;margin-bottom:12px;font:700 18px/22px 'Inter',sans-serif;color:#3E4B8E;white-space:nowrap}
+.d-legend i{flex:none;width:20px;height:20px;border-radius:50%}
+
+/* kanan: formulir (kini alur normal, tombol selalu menempel di bawah radio) */
+.d-form{pointer-events:auto}
+.d-sub{font:300 16px/20px 'Inter',sans-serif;color:#3E4B8E}
+.d-amts{display:flex;gap:20px}
+.amt{width:137px;height:38px;border:1px solid #3E4B8E;border-radius:10px;background:#fff;color:#3E4B8E;font:600 14px/17px 'Inter',sans-serif;cursor:pointer}
+.amt.on{background:rgba(55,138,221,.16);border-color:#378ADD}
+.d-nominal,.d-field{border:1px solid #3E4B8E;border-radius:10px;background:#fff;color:#3E4B8E;font:300 16px 'Inter',sans-serif;outline:none}
+.d-nominal:focus,.d-field:focus{border-color:#378ADD}
+.d-nominal::placeholder{color:#6b6b6b;opacity:1}
+.d-nominal{width:576px;height:38px;padding:0 24px}
+.d-lbl{font:300 16px/20px 'Inter',sans-serif;color:#6b6b6b}
+.d-field{width:290px;height:38px;padding:0 14px}
+.d-hide{display:flex;align-items:center;gap:5px;font:300 12px/18px 'Inter',sans-serif;color:#6b6b6b;cursor:pointer}
+.d-metode{font:300 16px/20px 'Inter',sans-serif;color:#3E4B8E}
+.d-radio{display:flex;align-items:center;gap:8px;height:26px;font:300 16px/20px 'Inter',sans-serif;color:#6b6b6b;cursor:pointer}
+.d-hide input,.d-radio input{flex:none;appearance:none;-webkit-appearance:none;width:12px;height:12px;margin:0;border:1.5px solid #3E4B8E;border-radius:50%;background:#fff;cursor:pointer}
+.d-hide input:checked,.d-radio input:checked{background:#3E4B8E;box-shadow:inset 0 0 0 2px #fff}
+
+/* tombol Lanjut Pembayaran (bentuk pil) */
+.d-submit{width:256px;height:38px;border:0;border-radius:19px;background:#378ADD;color:#fff;font:700 16px/20px 'Inter',sans-serif;cursor:pointer;transition:background .2s}
+.d-submit:hover{background:#2f78c4}
+.d-submit:focus-visible{outline:2px solid #3E4B8E;outline-offset:3px}
+
+/* tombol kembali ke halaman utama */
+.d-back{left:60px;top:32px;display:flex;align-items:center;gap:8px;font:600 16px/20px 'Inter',sans-serif;color:#3E4B8E}
+.d-back:hover{text-decoration:underline}
+.d-back:focus-visible{outline:2px solid #378ADD;outline-offset:4px;border-radius:4px}
+
+/* ---------- DESKTOP: susunan formulir berurutan ---------- */
+@media (min-width:821px){
+  .detail .d-form{left:720px;top:443px;width:580px;height:auto;display:flex;flex-direction:column;align-items:flex-start}
+  .d-form>*{position:static}
+  .d-sub{margin-top:5px}
+  .d-amts{margin:21px 0 0 69px}
+  .d-nominal{margin-top:20px}
+  .d-lbl{margin-left:8px}
+  .d-l-nama{margin-top:16px}
+  .d-f-nama{margin:7px 0 0 5px}
+  .d-l-mail{margin-top:10px}
+  .d-f-mail{margin:5px 0 0 5px}
+  .d-hide{margin:7px 0 0 12px}
+  .d-metode{margin:15px 0 0 12px}
+  .d-radio{margin-left:12px}
+  .r1{margin-top:4px}
+  .d-submit{margin:7px 0 0 4px}
+}
+
+/* ---------- PEMBAYARAN ---------- */
+
+.pay-sum{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 0;padding:18px 20px;border:1px solid #A6BCC9;border-radius:16px;background:rgba(55,138,221,.16)}
+.pay-sum b{font:600 28px/34px 'Inter',sans-serif;color:#3E4B8E}
+.pay-timer{padding:6px 12px;border-radius:999px;background:#fff;color:#3E4B8E;font:600 13px/16px 'Inter',sans-serif;white-space:nowrap}
+.pay-lbl{display:block;margin-bottom:6px;font:300 15px/18px 'Inter',sans-serif;color:#3E4B8E}
+.pay-sel{width:100%;height:42px;padding:0 14px;border:1px solid #3E4B8E;border-radius:10px;appearance:none;-webkit-appearance:none;color:#3E4B8E;font:400 15px 'Inter',sans-serif;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%233E4B8E' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;cursor:pointer}
+.pay-va{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding:14px 16px;border:1px dashed #378ADD;border-radius:12px}
+.pay-va span{display:block;font:300 13px/16px 'Inter',sans-serif;color:#6b6b6b}
+.pay-va b{display:block;margin-top:4px;font:600 22px/26px 'Inter',sans-serif;letter-spacing:1px;color:#3E4B8E}
+.pay-copy{height:34px;padding:0 16px;border:1px solid #378ADD;border-radius:9px;background:#fff;color:#378ADD;font:600 14px 'Inter',sans-serif;cursor:pointer}
+.pay-qr{display:flex;justify-content:center;width:fit-content;min-width:232px;min-height:232px;margin:0 auto;padding:16px;border:1px solid #A6BCC9;border-radius:16px;align-items:center;font:300 14px/20px 'Inter',sans-serif;color:#6b6b6b;text-align:center}
+.pay-hint{margin-top:12px;font:300 14px/20px 'Inter',sans-serif;color:#6b6b6b}
+.pay-hint b{font-weight:600;color:#3E4B8E}
+.pay-demo{margin-top:14px;font:300 12px/16px 'Inter',sans-serif;color:#6b6b6b;text-align:center}
+
+/* =====================================================
+   MOBILE  (layar <= 820px)
+   ===================================================== */
+@media (max-width:820px){
+  .detail{height:auto;display:flex;flex-direction:column;padding:20px 20px 56px}
+  .detail>*{position:static}
+  .detail .d-back{margin-bottom:16px}
+  .detail .d-photo{width:100%;height:auto;aspect-ratio:579/354;border-radius:24px}
+  .detail .d-info{width:auto;margin-top:20px}
+  .d-title{font-size:30px;line-height:38px}
+  .detail .d-desc{width:auto;margin-top:10px;font-size:17px;line-height:25px}
+  .d-divider{display:none}
+
+  .d-h2{font-size:24px;line-height:30px;white-space:normal}
+  .detail .d-prog-h{margin-top:32px}
+  .d-prog-txt{margin-top:8px;font-size:15px;line-height:22px}
+  .detail .d-bar{width:100%;margin-top:12px}
+  .d-donatur{margin-top:10px}
+  .detail .d-pie{width:200px;height:200px;margin:28px auto 0}
+  .detail .d-legend{width:max-content;max-width:100%;margin:22px auto 0}
+  .d-legend li{font-size:16px}
+
+  .detail .d-form{width:100%;height:auto;display:flex;flex-direction:column;gap:8px;margin-top:32px;padding-top:28px;border-top:1px solid #3E4B8E;pointer-events:auto}
+  .d-form>*{position:static}
+  .d-form-h{font-size:26px}
+  .d-sub{font-size:15px}
+  .detail .d-amts{width:100%;gap:8px}
+  .detail .amt{flex:1;width:auto;height:44px;font-size:13px}
+  .detail .d-nominal{width:100%;height:46px;padding:0 18px;font-size:16px}
+  .d-lbl{margin-top:8px;font-size:15px}
+  .detail .d-field{width:100%;height:46px;font-size:16px}
+  .d-hide{margin-top:4px;font-size:14px}
+  .d-metode{margin-top:14px;font-size:16px}
+  .d-radio{height:34px;font-size:16px}
+  .d-hide input,.d-radio input{width:18px;height:18px}
+  .detail .d-submit{width:100%;height:50px;margin-top:16px;font-size:16px;border-radius:25px}
+
+  .pay-sum b{font-size:24px;line-height:30px}
+  .pay-va b{font-size:18px;letter-spacing:.5px}
+  .pay-qr{min-width:0;min-height:0;padding:12px}
+  .pay-qr img,.pay-qr canvas{max-width:100%;height:auto!important}
+}
